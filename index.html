@@ -62,17 +62,22 @@
             color: #444;
             font-size: 15px;
         }
+        /* Home */
 
-        /* Hero */
-
-        .hero {
-            padding: 80px 0 70px;
+        .home {
+            padding: 70px 0;
+            border-top: none;
         }
 
-        .hero-content {
-            display: flex;
-            gap: 55px;
+        .home-content {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 60px;
             align-items: center;
+        }
+
+        .home-profile {
+            text-align: center;
         }
 
         .photo {
@@ -83,27 +88,27 @@
             background: #eeeeee;
         }
 
-        .hero h1 {
-            font-size: 44px;
-            margin: 0 0 10px;
+        .home-profile h1 {
+            font-size: 30px;
+            margin: 15px 0 3px;
             font-weight: 600;
         }
 
-        .position {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 5px;
+        .home-email {
+            font-size: 14px;
         }
 
-        .affiliation {
+        .home-about {
             font-size: 17px;
-            color: #666;
-            margin-bottom: 20px;
+            max-width: 700px;
         }
 
-        .research-tags {
-            color: #555;
-            font-size: 15px;
+        .home-about p:first-child {
+            margin-top: 0;
+        }
+
+        .home-about p:last-child {
+            margin-bottom: 0;
         }
 
         /* Sections */
@@ -223,13 +228,13 @@
 
         @media (max-width: 700px) {
 
-            .hero-content {
-                flex-direction: column;
-                align-items: flex-start;
+            .home-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
             }
 
-            .hero h1 {
-                font-size: 36px;
+            .home-profile {
+                text-align: center;
             }
 
             .research-grid {
@@ -240,7 +245,7 @@
                 display: none;
             }
 
-            .hero {
+            .home {
                 padding-top: 50px;
             }
         }
@@ -257,59 +262,58 @@
         <div class="nav-name">Fan Yang</div>
 
         <div class="nav-links">
-            <a href="#about">About</a>
+            <a href="#home">Home</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#links">Links</a>
         </div>
     </div>
 </nav>
+<!-- Home -->
 
-
-<!-- Hero -->
-
-<header class="hero">
-    <div class="container">
-
-<div class="hero-content">
-
-    <img
-        src="photo.jpg"
-        alt="Fan Yang"
-        class="photo"
-    >
-
-    <div>
-        <h1>Fan Yang</h1>
-    </div>
-
-</div>
-
-    </div>
-</header>
-
-
-<!-- About -->
-
-<section id="about">
+<section id="home" class="home">
 
     <div class="container">
 
-        <h2>About</h2>
+        <div class="home-content">
 
-        <p class="intro">
-            I am a postdoctoral researcher working at the interface of
-            quantum optics, quantum information, and quantum many-body
-            physics. My research focuses on light-matter interactions,
-            strongly interacting atomic systems, and quantum simulation
-            with Rydberg atoms.
-        </p>
+            <div class="home-profile">
 
-        <p class="intro">
-            My research interests include quantum optics, nanophotonics,
-            cavity quantum electrodynamics, cold atoms, Rydberg atom
-            arrays, and quantum many-body physics.
-        </p>
+                <img
+                    src="photo.jpg"
+                    alt="Fan Yang"
+                    class="photo"
+                >
+
+                <h1>Fan Yang</h1>
+
+                <div class="home-email">
+                    <a href="mailto:your.email@example.com">
+                        your.email@example.com
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-about">
+
+                <p>
+                    I am a postdoctoral researcher working at the interface of
+                    quantum optics, quantum information, and quantum many-body
+                    physics. My research focuses on light-matter interactions,
+                    strongly interacting atomic systems, and quantum simulation
+                    with Rydberg atoms.
+                </p>
+
+                <p>
+                    My research interests include quantum optics, nanophotonics,
+                    cavity quantum electrodynamics, cold atoms, Rydberg atom
+                    arrays, and quantum many-body physics.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
